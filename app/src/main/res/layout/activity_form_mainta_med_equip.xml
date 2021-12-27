@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".generalForm.FormMaintaMedEquip">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <FrameLayout
+          android:layout_width="match_parent"
+          android:layout_height="50dp"
+          android:background="@drawable/blue_bg">
+
+          <TextView
+              android:id="@+id/idTVEvery6months"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="20dp"
+              android:layout_marginTop="10dp"
+              android:layout_marginEnd="20dp"
+              android:fontFamily="@font/poppins_medium"
+              android:text="MAINTENANCE - MEDICAL EQUIPMENT - Inventory"
+              android:textAllCaps="false"
+              android:textColor="@color/white"
+              android:textSize="16sp"
+              android:textStyle="bold" />
+
+      </FrameLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/TILMedEqui"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:hint="Is there an inventory of medical equipment?"
+        style="@style/Edit_Text"
+        android:padding="0dp"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/color_txt"
+        android:textColorHint="@color/cinzento">
+
+      <TextView
+          android:id="@+id/idTVMedEqui"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/btn_register"
+          android:layout_marginTop="0dp"
+          android:layout_marginStart="10dp"
+          android:text="Is there an inventory of medical equipment?"
+          android:textAllCaps="false"
+          android:fontFamily="@font/poppins_regular"
+          android:textColor="@color/color_txt"
+          android:textColorHint="@color/cinzento"
+          android:textSize="16sp"
+
+          />
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/chkYesIME"
+            android:inputType="text"
+            android:onClick="onRadioButtonClicked_med_equip"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento"
+            android:textSize="14sp"
+            android:layout_marginStart="0dp"
+            android:text="Yes">
+        </RadioButton>
+        <RadioButton
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/chkNoIME"
+            android:onClick="onRadioButtonClicked_med_equip"
+            android:inputType="text"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento"
+            android:textSize="14sp"
+            android:layout_marginStart="10dp"
+            android:text="No">
+        </RadioButton>
+    </RadioGroup>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/TILMedEquiIn"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:hint="What is the format/platform of medical equipment inventory?"
+        style="@style/Edit_Text"
+        android:padding="0dp"
+        android:textColorHint="@color/cinzento"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_regular">
+
+      <TextView
+          android:id="@+id/idTVMedEquiIn"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/btn_register"
+          android:layout_marginTop="0dp"
+          android:layout_marginStart="10dp"
+          android:text="What is the format/platform of medical equipment inventory?"
+          android:textAllCaps="false"
+          android:fontFamily="@font/poppins_regular"
+          android:textColor="@color/color_txt"
+          android:textColorHint="@color/cinzento"
+          android:textSize="18sp"
+          />
+      <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+      <RadioButton
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/chkPaperInventory"
+          android:inputType="text"
+          android:onClick="onRadioButtonClicked1_med_equip"
+          android:fontFamily="@font/poppins_regular"
+          android:textColor="@color/color_txt"
+          android:textColorHint="@color/cinzento"
+          android:textSize="14sp"
+          android:layout_marginStart="10dp"
+          android:text="Paper Inventory">
+      </RadioButton>
+
+      <RadioButton
+          android:id="@+id/chkInventoryExcel"
+          android:layout_width="match_parent"
+          android:onClick="onRadioButtonClicked1_med_equip"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="10dp"
+          android:inputType="text"
+          android:text="Inventory in Excel"
+          android:fontFamily="@font/poppins_regular"
+          android:textColor="@color/color_txt"
+          android:textColorHint="@color/cinzento"
+          android:textSize="14sp">
+      </RadioButton>
+
+      <RadioButton
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/chkSoftwareLocal"
+          android:onClick="onRadioButtonClicked1_med_equip"
+          android:inputType="text"
+          android:fontFamily="@font/poppins_regular"
+          android:textColor="@color/color_txt"
+          android:textColorHint="@color/cinzento"
+          android:textSize="14sp"
+          android:layout_marginStart="10dp"
+          android:text="Software local">
+      </RadioButton>
+
+      <RadioButton
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/chkWebPlatform"
+          android:inputType="text"
+          android:onClick="onRadioButtonClicked1_med_equip"
+          android:fontFamily="@font/poppins_regular"
+          android:textColor="@color/color_txt"
+          android:textColorHint="@color/cinzento"
+          android:textSize="14sp"
+          android:layout_marginStart="10dp"
+          android:text="Web plataform">
+      </RadioButton>
+
+      </RadioGroup>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/TILCHFME"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:hint="Ifn case there is an inventory does the inventory show the status of the equipment?"
+        style="@style/Edit_Text"
+        android:padding="0dp"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/color_txt"
+        android:textColorHint="@color/cinzento">
+
+      <TextView
+          android:id="@+id/idTVME"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/btn_register"
+          android:layout_marginTop="0dp"
+          android:layout_marginStart="10dp"
+          android:text="Ifn case there is an inventory does the inventory show the status of the equipment?"
+          android:textAllCaps="false"
+          android:fontFamily="@font/poppins_regular"
+          android:textColor="@color/color_txt"
+          android:textColorHint="@color/cinzento"
+          android:textSize="16sp"
+          />
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="100dp"
+            android:onClick="onRadioButtonClicked2_med_equip"
+            android:layout_height="wrap_content"
+            android:id="@+id/chkYesIS"
+            android:inputType="text"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento"
+            android:textSize="14sp"
+            android:layout_marginStart="0dp"
+            android:text="Yes">
+        </RadioButton>
+        <RadioButton
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked2_med_equip"
+            android:id="@+id/chkNoIS"
+            android:inputType="text"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento"
+            android:textSize="14sp"
+            android:layout_marginStart="10dp"
+            android:text="No">
+        </RadioButton>
+    </RadioGroup>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/idTVtxtLPMMASF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_register"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="How is the repair process managed in the event of a malfunction of the medical equipment?"
+        android:textAllCaps="false"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/color_txt"
+        android:textColorHint="@color/cinzento"
+        android:textSize="16sp"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/TILtxtComments"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:hint="How is the repair process managed in the event of a malfunction of the medical equipment?"
+        style="@style/Edit_Text"
+        android:padding="15dp"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/color_txt"
+        android:textColorHint="@color/cinzento">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/txtMedEqui"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:importantForAutofill="no"
+          android:inputType="text"
+          android:fontFamily="@font/poppins_regular"
+          android:textColor="@color/color_txt"
+          android:textColorHint="@color/cinzento"
+          android:textSize="12sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/idTVContract"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="CONTRACT"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/color_txt"
+        android:textColorHint="@color/cinzento"
+        android:textSize="16sp"
+
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/TILPM"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:hint="At what level are PM contracts managed/stipulated?"
+        style="@style/Edit_Text"
+        android:padding="0dp"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/color_txt"
+        android:textColorHint="@color/cinzento">
+
+      <TextView
+          android:id="@+id/idTVPM"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/btn_register"
+          android:layout_marginTop="0dp"
+          android:layout_marginStart="10dp"
+          android:text="At what level are PM contracts managed/stipulated?"
+          android:textAllCaps="false"
+          android:fontFamily="@font/poppins_regular"
+          android:textColor="@color/color_txt"
+          android:textColorHint="@color/cinzento"
+          android:textSize="18sp"
+          />
+      <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+      <RadioButton
+          android:layout_width="match_parent"
+          android:onClick="onRadioButtonClicked3_med_equip"
+          android:layout_height="wrap_content"
+          android:id="@+id/chkMISAU"
+          android:inputType="text"
+          android:fontFamily="@font/poppins_regular"
+          android:textColor="@color/color_txt"
+          android:textColorHint="@color/cinzento"
+          android:textSize="14sp"
+          android:layout_marginStart="10dp"
+          android:text="MISAU (Central level)">
+      </RadioButton>
+
+      <RadioButton
+          android:id="@+id/chkDPS"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="10dp"
+          android:onClick="onRadioButtonClicked3_med_equip"
+          android:inputType="text"
+          android:text="DPS (Provincial level)"
+          android:fontFamily="@font/poppins_regular"
+          android:textColor="@color/color_txt"
+          android:textColorHint="@color/cinzento"
+          android:textSize="14sp">
+      </RadioButton>
+
+      <RadioButton
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/chkHFL"
+          android:inputType="text"
+          android:onClick="onRadioButtonClicked3_med_equip"
+          android:fontFamily="@font/poppins_regular"
+          android:textColor="@color/color_txt"
+          android:textColorHint="@color/cinzento"
+          android:textSize="14sp"
+          android:layout_marginStart="10dp"
+          android:text="Health facility level">
+      </RadioButton>
+      </RadioGroup>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/TILtxtOther"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:hint="Other"
+        style="@style/Edit_Text"
+        android:padding="15dp"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/color_txt"
+        android:textColorHint="@color/cinzento">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/txtOther"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:importantForAutofill="no"
+          android:inputType="text"
+          android:fontFamily="@font/poppins_regular"
+          android:textColor="@color/color_txt"
+          android:textColorHint="@color/cinzento"
+          android:textSize="12sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/idTVPMME"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="PREVENTIVE MAINTENANCE OF MEDICAL EQUIPMENT"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/color_txt"
+        android:textColorHint="@color/cinzento"
+        android:textSize="16sp"
+
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/TILPMProgram"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:hint="Is there an active PM program?"
+        style="@style/Edit_Text"
+        android:padding="0dp"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/color_txt"
+        android:textColorHint="@color/cinzento">
+
+      <TextView
+          android:id="@+id/idTVPMProgram"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/btn_register"
+          android:layout_marginTop="0dp"
+          android:layout_marginStart="10dp"
+          android:text="Is there an active PM program?"
+          android:textAllCaps="false"
+          android:fontFamily="@font/poppins_regular"
+          android:textColor="@color/color_txt"
+          android:textColorHint="@color/cinzento"
+          android:textSize="16sp"
+
+          />
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/chkYesPMPro"
+            android:inputType="text"
+            android:onClick="onRadioButtonClicked4_med_equip"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento"
+            android:textSize="14sp"
+            android:layout_marginStart="0dp"
+            android:text="Yes">
+        </RadioButton>
+        <RadioButton
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/chkNoPMProg"
+            android:onClick="onRadioButtonClicked4_med_equip"
+            android:inputType="text"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento"
+            android:textSize="14sp"
+            android:layout_marginStart="10dp"
+            android:text="No">
+        </RadioButton>
+    </RadioGroup>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/TILPF"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:hint="If the preventive maintenance program is implemented, is there a specific protocol to follow and form to fill in?"
+        style="@style/Edit_Text"
+        android:padding="0dp"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/color_txt"
+        android:textColorHint="@color/cinzento">
+
+      <TextView
+          android:id="@+id/idTVPF"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/btn_register"
+          android:layout_marginTop="0dp"
+          android:layout_marginStart="10dp"
+          android:text="If the preventive maintenance program is implemented, is there a specific protocol to follow and form to fill in?"
+          android:textAllCaps="false"
+          android:fontFamily="@font/poppins_regular"
+          android:textColor="@color/color_txt"
+          android:textColorHint="@color/cinzento"
+          android:textSize="16sp"
+          />
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/chkYesSP"
+            android:inputType="text"
+            android:onClick="onRadioButtonClicked5_med_equip"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento"
+            android:textSize="14sp"
+            android:layout_marginStart="0dp"
+            android:text="Yes">
+        </RadioButton>
+        <RadioButton
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked5_med_equip"
+            android:id="@+id/chkNoSP"
+            android:inputType="text"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento"
+            android:textSize="14sp"
+            android:layout_marginStart="10dp"
+            android:text="No">
+        </RadioButton>
+    </RadioGroup>>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/TILBCE"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:hint="Are all maintenance activities recorded in a specific way (books, computers, etc.)?"
+        style="@style/Edit_Text"
+        android:padding="0dp"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/color_txt"
+        android:textColorHint="@color/cinzento">
+
+      <TextView
+          android:id="@+id/idTVBCE"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/btn_register"
+          android:layout_marginTop="0dp"
+          android:layout_marginStart="10dp"
+          android:text="Are all maintenance activities recorded in a specific way (books, computers, etc.)?"
+          android:textAllCaps="false"
+          android:fontFamily="@font/poppins_regular"
+          android:textColor="@color/color_txt"
+          android:textColorHint="@color/cinzento"
+          android:textSize="16sp"
+          />
+
+      <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/chkYesSW"
+            android:inputType="text"
+            android:onClick="onRadioButtonClicked6_med_equip"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento"
+            android:textSize="14sp"
+            android:layout_marginStart="0dp"
+            android:text="Yes">
+        </RadioButton>
+        <RadioButton
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/chkNoSW"
+            android:inputType="text"
+            android:onClick="onRadioButtonClicked6_med_equip"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento"
+            android:textSize="14sp"
+            android:layout_marginStart="10dp"
+            android:text="No">
+        </RadioButton>
+      </RadioGroup>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/TILCA"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:hint="Ifn case there is an inventory does the inventory show the status of the equipment?"
+        style="@style/Edit_Text"
+        android:padding="0dp"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/color_txt"
+        android:textColorHint="@color/cinzento">
+
+      <TextView
+          android:id="@+id/idTVCA"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/btn_register"
+          android:layout_marginTop="0dp"
+          android:layout_marginStart="10dp"
+          android:text="Do you control the costs associated with maintenance?"
+          android:textAllCaps="false"
+          android:fontFamily="@font/poppins_regular"
+          android:textColor="@color/color_txt"
+          android:textColorHint="@color/cinzento"
+          android:textSize="16sp"
+          />
+
+      <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/chkYesCAM"
+            android:inputType="text"
+            android:onClick="onRadioButtonClicked7_med_equip"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento"
+            android:textSize="14sp"
+            android:layout_marginStart="0dp"
+            android:text="Yes">
+        </RadioButton>
+        <RadioButton
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/chkNoCAM"
+            android:inputType="text"
+            android:onClick="onRadioButtonClicked7_med_equip"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento"
+            android:textSize="14sp"
+            android:layout_marginStart="10dp"
+            android:text="No">
+        </RadioButton>
+      </RadioGroup>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+      <Button
+          android:id="@+id/btn_backIN"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_margin="8dp"
+          android:layout_weight="1"
+          android:background="@drawable/blue_fill__rounded_color"
+          android:text="Voltar"
+          android:textColor="@color/white"
+          android:textAllCaps="false" />
+
+      <Button
+          android:id="@+id/btn_next"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_margin="8dp"
+          android:layout_weight="1"
+          android:background="@drawable/blue_fill__rounded_color"
+          android:text="Proximo"
+          android:textColor="@color/white"
+          android:textAllCaps="false" />
+    </LinearLayout>
+
+
+  </LinearLayout>
+
+</ScrollView>

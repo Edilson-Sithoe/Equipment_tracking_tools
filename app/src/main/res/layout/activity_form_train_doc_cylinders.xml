@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".generalForm.FormTrainDocCylinders">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/blue_bg">
+
+            <TextView
+                android:id="@+id/idTVEvery6months"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="DOCUMENTED TRAINING IN CYLINDERS"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </FrameLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TILTreined"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="Are end-users (medical staff) trained in use, care, and safety of O2 Cylinders?"
+            style="@style/Edit_Text"
+            android:padding="0dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento">
+
+            <TextView
+                android:id="@+id/idTVTrained"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_register"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="10dp"
+                android:text="Are end-users (medical staff) trained in use, care, and safety of O2 Cylinders?"
+                android:textAllCaps="false"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="16sp"
+                />
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chkYesMS"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_train_cyl"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"
+                    android:layout_marginStart="0dp"
+                    android:text="Yes">
+                </RadioButton>
+                <RadioButton
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chkNoMS"
+                    android:onClick="onRadioButtonClicked_train_cyl"
+                    android:inputType="text"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"
+                    android:layout_marginStart="10dp"
+                    android:text="No">
+                </RadioButton>
+        </RadioGroup>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TILST"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="How often is the end-user training?"
+            style="@style/Edit_Text"
+            android:padding="0dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento">
+
+            <TextView
+                android:id="@+id/idTVST"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_register"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="10dp"
+                android:text="How often is the end-user training?"
+                android:textAllCaps="false"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="18sp"
+                />
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/chkEvery6"
+                android:onClick="onRadioButtonClicked1_train_cyl"
+                android:inputType="text"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:text="Every 6 months">
+            </RadioButton>
+
+            <RadioButton
+                android:id="@+id/chkEveryYear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:onClick="onRadioButtonClicked1_train_cyl"
+                android:inputType="text"
+                android:text="Every year"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="14sp">
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/chkEvery2Year"
+                android:inputType="text"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:onClick="onRadioButtonClicked1_train_cyl"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:text="Every 2 years">
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/chkEvery5Year"
+                android:inputType="text"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:onClick="onRadioButtonClicked1_train_cyl"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:text="Every 5 years">
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/chkOnRequest"
+                android:inputType="text"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:onClick="onRadioButtonClicked1_train_cyl"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:text="On request">
+            </RadioButton>
+            </RadioGroup>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/idTVtxtTSHFTM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_register"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="How many end-users are formed in aspects of use, care, and safety of  O2 cylinders in the health facility? (#)"
+            android:textAllCaps="false"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento"
+            android:textSize="16sp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILtxtEndUser"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:hint="How many end-users are formed in aspects of use, care, and safety of  O2 cylinders in the health facility? (#)"
+            android:padding="15dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtEndUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="12sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TILchkYesMandS"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="Are technicians formed in aspects of use, maintenance, and safety of O2 cylinders?"
+            style="@style/Edit_Text"
+            android:padding="0dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento">
+
+            <TextView
+                android:id="@+id/idTVchkYesMandS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_register"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="10dp"
+                android:text="Are technicians formed in aspects of use, maintenance, and safety of O2 cylinders?"
+                android:textAllCaps="false"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="16sp"
+                />
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chkYesMandS"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked2_train_cyl"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"
+                    android:layout_marginStart="0dp"
+                    android:text="Yes">
+                </RadioButton>
+                <RadioButton
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chkNoSMandS"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked2_train_cyl"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"
+                    android:layout_marginStart="10dp"
+                    android:text="No">
+                </RadioButton>
+        </RadioGroup>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TILSchkEvery6US"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="How often is the end-user training?"
+            style="@style/Edit_Text"
+            android:padding="0dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento">
+
+            <TextView
+                android:id="@+id/idTVSchkEvery6US"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_register"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="10dp"
+                android:text="How often is the end-user training?"
+                android:textAllCaps="false"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="18sp"
+                />
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/chkEvery6US"
+                android:inputType="text"
+                android:onClick="onRadioButtonClicked3_train_cyl"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:text="Every 6 months">
+            </RadioButton>
+
+            <RadioButton
+                android:id="@+id/chkEveryYearUS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:inputType="text"
+                android:text="Every year"
+                android:onClick="onRadioButtonClicked3_train_cyl"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="14sp">
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/chkEvery2YearUS"
+                android:inputType="text"
+                android:onClick="onRadioButtonClicked3_train_cyl"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:text="Every 2 years">
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/chkEvery5YearUS"
+                android:inputType="text"
+                android:onClick="onRadioButtonClicked3_train_cyl"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:text="Every 5 years">
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/chkOnRequestUS"
+                android:inputType="text"
+                android:onClick="onRadioButtonClicked3_train_cyl"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:text="On request">
+            </RadioButton>
+            </RadioGroup>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/idTVtxtMTTH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_register"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="How many technicians are trained in handling, maintenance, and safety of O2 cylinders? (#)"
+            android:textAllCaps="false"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento"
+            android:textSize="16sp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TILtxtMTTH"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="How many technicians are trained in handling, maintenance, and safety of O2 cylinders? (#)"
+            style="@style/Edit_Text"
+            android:padding="15dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtMTTH"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="12sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TILtxtOther"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="Comments on training in Cylinders"
+            style="@style/Edit_Text"
+            android:padding="15dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtCommentsTraiC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="12sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btn_backDOCT"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/blue_fill__rounded_color"
+                android:text="Proximo"
+                android:textColor="@color/white"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/blue_fill__rounded_color"
+                android:text="Proximo"
+                android:textColor="@color/white"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

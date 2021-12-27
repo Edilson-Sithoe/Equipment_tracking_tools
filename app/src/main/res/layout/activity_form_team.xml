@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".generalForm.FormTeam">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/blue_bg">
+
+            <TextView
+                android:id="@+id/idTVEvery6months"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="TRAINING PROGRAM IN O2 - TEAM"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </FrameLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TILMedEqui"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="Are technicians present in health facilities specialized in medical gas 24 hours a day, 7 days a week?"
+            style="@style/Edit_Text"
+            android:padding="0dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento">
+
+            <TextView
+                android:id="@+id/idTVMedEqui"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_register"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="10dp"
+                android:text="Are technicians present in health facilities specialized in medical gas 24 hours a day, 7 days a week?"
+                android:textAllCaps="false"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="16sp"
+                />
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chkYesTM"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_team"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"
+                    android:layout_marginStart="0dp"
+                    android:text="Yes">
+                </RadioButton>
+                <RadioButton
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chkNoTM"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_team"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"
+                    android:layout_marginStart="10dp"
+                    android:text="No">
+                </RadioButton>
+        </RadioGroup>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/idTVtxtLPMMASF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_register"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="What is the total number of technicians in the health facilities (#)?"
+            android:textAllCaps="false"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TILtxtComments"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="What is the total number of technicians in the health facilities (#)?"
+            style="@style/Edit_Text"
+            android:padding="15dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtTHFTM"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="12sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/idTVtxtTSHFTMF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_register"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="What is the number of technicians specialized in  medical gas in the Health facility (#)?"
+            android:textAllCaps="false"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento"
+            android:textSize="16sp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TILtxtTSHFTM"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="What is the number of technicians specialized in  medical gas in the Health facility (#)?"
+            style="@style/Edit_Text"
+            android:padding="15dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtTSHFTM"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="12sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/idTVtxtBMETM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_register"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="What is the number of Biomedical Engineers (#)?"
+            android:textAllCaps="false"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TILtxtBMETM"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="What is the number of Biomedical Engineers (#)?"
+            style="@style/Edit_Text"
+            android:padding="15dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtBMETM"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="12sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/idTVProgram"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="SECURITY PROGRAM"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textAllCaps="false"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TIL"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="Is there a safety program for O2 in your Health facility?"
+            style="@style/Edit_Text"
+            android:padding="0dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento">
+
+            <TextView
+                android:id="@+id/idTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_register"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="10dp"
+                android:text="Is there a safety program for O2 in your Health facility?"
+                android:textAllCaps="false"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="16sp"
+                />
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chkYesSPO2"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked2_team"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"
+                    android:layout_marginStart="0dp"
+                    android:text="Yes">
+                </RadioButton>
+                <RadioButton
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chkNoSPO2"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked2_team"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"
+                    android:layout_marginStart="10dp"
+                    android:text="No">
+                </RadioButton>
+        </RadioGroup>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/idTVtxtROFSPO2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_register"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Who is responsible for the safety program in your Health facility?"
+            android:textAllCaps="false"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento"
+            android:textSize="16sp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TILtxtROFSPO2"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="Who is responsible for the safety program in your Health facility?"
+            style="@style/Edit_Text"
+            android:padding="15dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtROFSPO2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="12sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TILchkNoNSS"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="Is the safety program in your health facility part of a national security system?"
+            style="@style/Edit_Text"
+            android:padding="0dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento">
+
+            <TextView
+                android:id="@+id/idTVchkNoNSS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_register"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="10dp"
+                android:text="Is the safety program in your health facility part of a national security system?"
+                android:textAllCaps="false"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="16sp"
+                />
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chkYesNSS"
+                    android:inputType="text"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"
+                    android:onClick="onRadioButtonClicked3_team"
+                    android:layout_marginStart="0dp"
+                    android:text="Yes">
+                </RadioButton>
+                <RadioButton
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chkNoNSS"
+                    android:inputType="text"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"
+                    android:onClick="onRadioButtonClicked3_team"
+                    android:layout_marginStart="10dp"
+                    android:text="No">
+                </RadioButton>
+        </RadioGroup>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btn_backTEAM"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/blue_fill__rounded_color"
+                android:text="Voltar"
+                android:textColor="@color/white"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/blue_fill__rounded_color"
+                android:text="Proximo"
+                android:textColor="@color/white"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

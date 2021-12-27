@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".generalForm.FormOxigenSystem">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/blue_bg">
+
+            <TextView
+                android:id="@+id/idTVEvery6months"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="OXYGEN SYSTEM"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </FrameLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TILAVGConsuming"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="What is the average consumption of O2 of the Health facility (m3/year)?"
+            style="@style/Edit_Text"
+            android:padding="15dp"
+            android:textColorHint="@color/cinzento"
+            app:hintTextColor="@color/black"
+            android:fontFamily="@font/poppins_regular"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/idTxtConsumMGS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:inputType="textLongMessage"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TILSupElect"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="Date of Interview"
+            style="@style/Edit_Text"
+            android:padding="0dp"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento"
+            android:fontFamily="@font/poppins_regular">
+
+            <TextView
+                android:id="@+id/idTVSupElect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_register"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="10dp"
+                android:text="What is the system used for the primary supply of O2?"
+                android:textAllCaps="false"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/idChkFactory"
+                android:inputType="text"
+                android:onClick="onRadioButtonClicked_ox"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:text="Factory ">
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/idChkLiqTank"
+                android:inputType="text"
+                android:onClick="onRadioButtonClicked_ox"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:text="O2 Liquid Tank">
+            </RadioButton>
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/idChkManifold"
+                android:onClick="onRadioButtonClicked_ox"
+                android:inputType="text"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:text="Manifold">
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/idChkConc"
+                android:inputType="text"
+                android:onClick="onRadioButtonClicked_ox"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:text="Concentrators">
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/idChkCylinders"
+                android:inputType="text"
+                android:onClick="onRadioButtonClicked_ox"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:text="Cylinders">
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/idChkNA"
+                android:onClick="onRadioButtonClicked_ox"
+                android:inputType="text"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:text="N/A">
+            </RadioButton>
+            </RadioGroup>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TILHOS"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="How old is the system?"
+            style="@style/Edit_Text"
+            android:padding="0dp"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento"
+            android:fontFamily="@font/poppins_regular">
+
+            <TextView
+                android:id="@+id/idTVHOS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_register"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="10dp"
+                android:text="What is the system used for the secondary supply of O2?"
+                android:textAllCaps="false"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/idChkFactorySS"
+                android:onClick="onRadioButtonClicked_two_ox"
+                android:inputType="text"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:text="Factory ">
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/idChkLiqTankSS"
+                android:onClick="onRadioButtonClicked_two_ox"
+                android:inputType="text"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:text="O2 Liquid Tank">
+            </RadioButton>
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/idChkManifoldSS"
+                android:onClick="onRadioButtonClicked_two_ox"
+                android:inputType="text"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:text="Manifold">
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/idChkConcSS"
+                android:inputType="text"
+                android:onClick="onRadioButtonClicked_two_ox"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:text="Concentrators">
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/idChkCylindersSS"
+                android:inputType="text"
+                android:onClick="onRadioButtonClicked_two_ox"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:text="Cylinders">
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/idChkNASS"
+                android:inputType="text"
+                android:onClick="onRadioButtonClicked_two_ox"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:text="N/A">
+            </RadioButton>
+            </RadioGroup>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TILCondSE"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="What is the condition of the equipment?"
+            style="@style/Edit_Text"
+            android:padding="0dp"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento"
+            android:fontFamily="@font/poppins_regular">
+
+            <TextView
+                android:id="@+id/idTVCondSE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_register"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="10dp"
+                android:text="What is the system used for the emergency supply of O2?"
+                android:textAllCaps="false"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="18sp"
+                />
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/idChkFactoryES"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_three_ox"
+                    android:text="Factory "
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/idChkLiqTankES"
+                android:inputType="text"
+                    android:onClick="onRadioButtonClicked_three_ox"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:text="O2 Liquid Tank">
+            </RadioButton>
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/idChkManifoldES"
+                android:inputType="text"
+                android:onClick="onRadioButtonClicked_three_ox"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:text="Manifold">
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/idChkConcES"
+                android:inputType="text"
+                android:onClick="onRadioButtonClicked_three_ox"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:text="Concentrators">
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/idChkCylindersES"
+                android:inputType="text"
+                android:onClick="onRadioButtonClicked_three_ox"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:text="Cylinders">
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/idChkNAES"
+                android:inputType="text"
+                android:onClick="onRadioButtonClicked_three_ox"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:text="N/A">
+            </RadioButton>
+            </RadioGroup>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TILComSE"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="General comment of the oxygen system"
+            style="@style/Edit_Text"
+            android:padding="15dp"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento"
+            android:fontFamily="@font/poppins_regular">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/idTxtComentMGS"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btn_backMGS"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/blue_fill__rounded_color"
+                android:text="Voltar"
+                android:textColor="@color/white"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/blue_fill__rounded_color"
+                android:text="Proximo"
+                android:textColor="@color/white"
+                android:textAllCaps="false" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

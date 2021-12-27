@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".generalForm.FormIdentiHeaFacil">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/idTVEvery6months"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="EQUIPMENT INVENTORY"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textAllCaps="false"
+            android:textColorHint="@color/cinzento"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="16sp"
+
+            />
+
+        <TextView
+            android:id="@+id/idTVtxtDept"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_register"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Department(0)"
+            android:textAllCaps="false"
+            android:textColorHint="@color/cinzento"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="16sp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILtxtDept"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:hint="Department(0)"
+            android:padding="15dp"
+            android:textColorHint="@color/cinzento"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_regular">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtDept"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColorHint="@color/cinzento"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="12sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/idTVtxtTypeEquip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_register"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Type of Equipment"
+            android:textAllCaps="false"
+            android:textColorHint="@color/cinzento"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="16sp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILtxtTypeEquip"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:hint="Type of Equipment"
+            android:padding="15dp"
+            android:textColorHint="@color/cinzento"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_regular">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtTypeEquip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColorHint="@color/cinzento"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="12sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/idTVtxtIventNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_register"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Inventory Number"
+            android:textAllCaps="false"
+            android:textColorHint="@color/cinzento"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="16sp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILtxtIventNumber"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:hint="Inventory Number"
+            android:padding="15dp"
+            android:textColorHint="@color/cinzento"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_regular">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtIventNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:textColorHint="@color/cinzento"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="12sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/idTVtxtMake"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_register"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Make"
+            android:textAllCaps="false"
+            android:textColorHint="@color/cinzento"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="16sp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILtxtMake"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:hint="Make"
+            android:padding="15dp"
+            android:textColorHint="@color/cinzento"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_regular">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtMake"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColorHint="@color/cinzento"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="12sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/idTVtxtModel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_register"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Model"
+            android:textAllCaps="false"
+            android:textColorHint="@color/cinzento"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="16sp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILtxtModel"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:hint="Model"
+            android:padding="15dp"
+            android:textColorHint="@color/cinzento"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_regular">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtModel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColorHint="@color/cinzento"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="12sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/idTVtxtSerialNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_register"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Serial Number"
+            android:textAllCaps="false"
+            android:textColorHint="@color/cinzento"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="16sp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILtxtSerialNumber"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:hint="Serial Number"
+            android:padding="15dp"
+            android:textColorHint="@color/cinzento"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_regular">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtSerialNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColorHint="@color/cinzento"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="12sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/idTVtxtEquipCond"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_register"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Equipment Condition(2)"
+            android:textAllCaps="false"
+            android:textColorHint="@color/cinzento"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="16sp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILtxtEquipCond"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:hint="Equipment Condition(2)"
+            android:padding="15dp"
+            android:textColorHint="@color/cinzento"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_regular">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtEquipCond"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColorHint="@color/cinzento"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="12sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/idTVYearInstall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_register"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Year of Installation"
+            android:textAllCaps="false"
+            android:textColorHint="@color/cinzento"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="16sp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILYearInstall"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:hint="Year of Installation"
+            android:padding="15dp"
+            android:textColorHint="@color/cinzento"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_regular">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtYearInstall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:textColorHint="@color/cinzento"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="12sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/idTVtxtMainContract"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_register"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Maintenance Contract (Yes or No)"
+            android:textAllCaps="false"
+            android:textColorHint="@color/cinzento"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="16sp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILtxtMainContract"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:hint="Maintenance Contract (Yes or No)"
+            android:padding="15dp"
+            android:textColorHint="@color/cinzento"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_regular">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtMainContract"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColorHint="@color/cinzento"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="12sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:id="@+id/idTVtxtDataMaintenance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_register"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Data of the last maintenance"
+            android:textAllCaps="false"
+            android:textColorHint="@color/cinzento"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="16sp"
+            />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILtxtDataMaintenance"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:hint="Data of the last maintenance"
+            android:padding="15dp"
+            android:textColorHint="@color/cinzento"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_regular">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtDataMaintenance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColorHint="@color/cinzento"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="12sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/idTVtxtComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_register"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Comments"
+            android:textAllCaps="false"
+            android:textColorHint="@color/cinzento"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="16sp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILtxtComment"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:hint="Comments"
+            android:padding="15dp"
+            android:textColorHint="@color/cinzento"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_regular">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColorHint="@color/cinzento"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="12sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btn_backInvent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/blue_fill__rounded_color"
+                android:text="Voltar"
+                android:textColor="@color/white"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_nextH"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/blue_fill__rounded_color"
+                android:text="Proximo"
+                android:textColor="@color/white"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

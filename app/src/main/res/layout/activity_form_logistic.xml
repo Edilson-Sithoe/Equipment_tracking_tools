@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".generalForm.FormLogistic">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/blue_bg">
+
+            <TextView
+                android:id="@+id/idTVEvery6months"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="O2 LOGISTICS"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </FrameLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TILHOS"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="Where does the HF receive Oxygen Cylinders from?"
+            style="@style/Edit_Text"
+            android:padding="0dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento">
+
+            <TextView
+                android:id="@+id/idTVHOS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_register"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="10dp"
+                android:text="Where does the HF receive Oxygen Cylinders from?"
+                android:textAllCaps="false"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="18sp"
+                />
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <RadioButton
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/chkDPM"
+                android:inputType="text"
+                android:onClick="onRadioButtonClicked_log"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:text="DPM">
+            </RadioButton>
+
+            <RadioButton
+                android:id="@+id/chkDDM"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:onClick="onRadioButtonClicked_log"
+                android:inputType="text"
+                android:text="DDM"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="14sp">
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/chkPrivateSector"
+                android:inputType="text"
+                android:onClick="onRadioButtonClicked_log"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:text="Private Sector">
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/chkNGO"
+                android:inputType="text"
+                android:onClick="onRadioButtonClicked_log"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:text="NGO">
+            </RadioButton>
+
+
+            <RadioButton
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/chkDontKnow"
+                android:inputType="text"
+                android:onClick="onRadioButtonClicked_log"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:text="Don' know">
+            </RadioButton>
+            </RadioGroup>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TILtxtLPMMAS"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="Other"
+            style="@style/Edit_Text"
+            android:padding="15dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtOther"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="12sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/idTVtxtLPMMASF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_register"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Comments"
+            android:textAllCaps="false"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento"
+            android:textSize="16sp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TILtxtComments"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="Comments"
+            style="@style/Edit_Text"
+            android:padding="15dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtComments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="12sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TILCHFME"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="Does the Health facility use a logbook for the Cylinders stock?"
+            style="@style/Edit_Text"
+            android:padding="0dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento">
+
+            <TextView
+                android:id="@+id/idTVME"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_register"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="10dp"
+                android:text="Does the Health facility use a logbook for the Cylinders stock?"
+                android:textAllCaps="false"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="16sp"
+                />
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chkYesLBC"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked1_log"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"
+                    android:layout_marginStart="0dp"
+                    android:text="Yes">
+                </RadioButton>
+                <RadioButton
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chkNoLBC"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked1_log"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"
+                    android:layout_marginStart="10dp"
+                    android:text="No">
+                </RadioButton>
+        </RadioGroup>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/idTVtxtCommentsLBC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_register"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Comments"
+            android:textAllCaps="false"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento"
+            android:textSize="16sp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TILtxtCommentsLBC"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="Comments"
+            style="@style/Edit_Text"
+            android:padding="15dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtCommentsLBC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="12sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TILchkYesLOX"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="Does the facility use a log for the LOX tank stock?"
+            style="@style/Edit_Text"
+            android:padding="0dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento">
+
+            <TextView
+                android:id="@+id/idTVchkYesLOX"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_register"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="10dp"
+                android:text="Does the facility use a log for the LOX tank stock?"
+                android:textAllCaps="false"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="16sp"
+                />
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chkYesLOX"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked2_log"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"
+                    android:layout_marginStart="0dp"
+                    android:text="Yes">
+                </RadioButton>
+                <RadioButton
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chkNoLOX"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked2_log"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:textSize="14sp"
+                    android:layout_marginStart="10dp"
+                    android:text="No">
+                </RadioButton>
+        </RadioGroup>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/idTVtxtCommentsLOX"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_register"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Comments"
+            android:textAllCaps="false"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento"
+            android:textSize="16sp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TILtxtCommentsLOX"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="Comments"
+            style="@style/Edit_Text"
+            android:padding="15dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtCommentsLOX"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="12sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TILchkDPMCO"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="Who supplies the consumables for O2 equipment?"
+            style="@style/Edit_Text"
+            android:padding="0dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento">
+
+            <TextView
+                android:id="@+id/idTVchkDPMCO"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_register"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="10dp"
+                android:text="Who supplies the consumables for O2 equipment?"
+                android:textAllCaps="false"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="18sp"
+                />
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/chkDPMCO"
+                android:onClick="onRadioButtonClicked3_log"
+                android:inputType="text"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:text="DPM">
+            </RadioButton>
+
+            <RadioButton
+                android:id="@+id/chkDDMCO"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:inputType="text"
+                android:text="DDM"
+                android:onClick="onRadioButtonClicked3_log"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="14sp">
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/chkPipelineCO"
+                android:inputType="text"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="14sp"
+                android:onClick="onRadioButtonClicked3_log"
+                android:layout_marginStart="10dp"
+                android:text="Pipelina">
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/chkNGOCO"
+                android:inputType="text"
+                android:onClick="onRadioButtonClicked3_log"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:text="NGO">
+            </RadioButton>
+
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/chkDontNCO"
+                android:inputType="text"
+                android:onClick="onRadioButtonClicked3_log"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:text="Don' know">
+            </RadioButton>
+            </RadioGroup>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/idTVtxtLPMMASFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_register"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Comments"
+            android:textAllCaps="false"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento"
+            android:textSize="16sp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TILtxtCommentsCO"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="Comments"
+            style="@style/Edit_Text"
+            android:padding="15dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtCommentsCO"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:textSize="12sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btn_backLOG"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/blue_fill__rounded_color"
+                android:text="Voltar"
+                android:textColor="@color/white"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_nextLOG"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/blue_fill__rounded_color"
+                android:text="Proximo"
+                android:textColor="@color/white"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

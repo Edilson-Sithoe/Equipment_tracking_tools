@@ -1,0 +1,1006 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".generalForm.FormElectricity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/blue_bg">
+
+            <TextView
+                android:id="@+id/idTVEvery6months"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="INFRASTRUCTURE"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/idTVElect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_register"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="25dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="ELECTRICITY"
+            android:textAllCaps="false"
+            android:textColor="@color/color_txt"
+            android:textSize="16sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILTypeOfInter"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Date of Interview"
+            android:padding="0dp"
+            android:textColorHint="@color/cinzento"
+            app:hintTextColor="@color/color_txt">
+
+
+            <TextView
+                android:id="@+id/idTVMaSrc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_register"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="What is your main source of power/electricity?"
+                android:textAllCaps="false"
+                android:textColorHint="@color/cinzento"
+                android:textSize="16sp"
+                app:hintTextColor="@color/color_txt"
+
+                />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/chkEDM"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    android:onClick="onRadioButtonClicked_fe"
+                    android:text="National Grid (EDM)"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/black"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkGenerator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    android:onClick="onRadioButtonClicked_fe"
+                    android:text="Generator"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/black"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkSolar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    android:onClick="onRadioButtonClicked_fe"
+                    android:text="Solar System"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/black"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkOther"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    android:onClick="onRadioButtonClicked_fe"
+                    android:text="Other"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/black"
+                    android:textSize="14sp"></RadioButton>
+            </RadioGroup>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILTPoOut"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Date of Interview"
+            android:padding="0dp"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/black">
+
+
+            <TextView
+                android:id="@+id/idTVPowOut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_register"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="How often do you get power outage?"
+                android:textAllCaps="false"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/black"
+                android:textSize="18sp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/chkOutage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    android:onClick="onRadioButtonClicked_two_fe"
+                    android:text="No outage in the last 6 months"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/black"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkOutLesHour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    android:onClick="onRadioButtonClicked_two_fe"
+                    android:text="Outage of less than 2 hours in the last month"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/black"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkFrquent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    android:onClick="onRadioButtonClicked_two_fe"
+                    android:text="Frequent or prolonged outages of more than 2 hours in the last month"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/black"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkWeekly"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    android:onClick="onRadioButtonClicked_two_fe"
+                    android:text="Weekly outages "
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/black"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkDaily"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    android:onClick="onRadioButtonClicked_two_fe"
+                    android:text="Daily outages"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/black"
+                    android:textSize="14sp"></RadioButton>
+            </RadioGroup>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILLastPO"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:hint="Date of Interview"
+            android:padding="0dp"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/black"
+            android:fontFamily="@font/poppins_regular">
+
+
+            <TextView
+                android:id="@+id/idTVLastPO"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_register"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="10dp"
+                android:text="When was the last power outage?"
+                android:textAllCaps="false"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="18sp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/chkBToYes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    android:onClick="onRadioButtonClicked_three_fe"
+                    android:text="Between today and yesterday "
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/black"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkThWeek"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    android:onClick="onRadioButtonClicked_three_fe"
+                    android:text="This week"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/black"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkThMonth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    android:onClick="onRadioButtonClicked_three_fe"
+                    android:text="This month "
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/black"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkThYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    android:onClick="onRadioButtonClicked_three_fe"
+                    android:text="This year"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/black"
+                    android:textSize="14sp"></RadioButton>
+            </RadioGroup>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILDurPO"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:hint="Date of Interview"
+            android:padding="0dp"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/black"
+            android:fontFamily="@font/poppins_regular">
+
+
+            <TextView
+                android:id="@+id/idTVDuriPO"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_register"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="10dp"
+                android:text="What is the duration of the typical power outage?"
+                android:textAllCaps="false"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="18sp"
+                />
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/chkLesThanMin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_four_fe"
+                    android:text="Less than a minute"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkFewMinute"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_four_fe"
+                    android:text="Few minutes   "
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkLessThanH"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_four_fe"
+                    android:text="Less than an hour"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkBetweeOneEi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_four_fe"
+                    android:text="Between 1-8 hours"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkDay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_four_fe"
+                    android:text="Days"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="14sp"></RadioButton>
+            </RadioGroup>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILShePO"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:padding="0dp"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/black"
+            android:fontFamily="@font/poppins_regular">
+
+
+            <TextView
+                android:id="@+id/idTVSceduPO"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_register"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="10dp"
+                android:text="Are there scheduled power outages?"
+                android:textAllCaps="false"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="18sp"
+                />
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/chkYesOR"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_five_fe"
+                    android:text="Yes"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkNOoR"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_five_fe"
+                    android:text="No"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkDontKnow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_five_fe"
+                    android:text="Don't know"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="14sp"></RadioButton>
+            </RadioGroup>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILSecSrcElect"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:hint="Date of Interview"
+            android:padding="0dp"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/black"
+            android:fontFamily="@font/poppins_regular">
+
+
+            <TextView
+                android:id="@+id/idTVSecSrcElec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_register"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="10dp"
+                android:text="Does the health facility have a secondary source of electricity?"
+                android:textAllCaps="false"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="18sp" />
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/chkNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_six_fe"
+                    android:text="No"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkGeneratorSec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_six_fe"
+                    android:text="Generator"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkSolPanels"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_six_fe"
+                    android:text="Solar Panels"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkOtherSec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_six_fe"
+                    android:text="Other"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="14sp"></RadioButton>
+            </RadioGroup>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILSecProvHosp"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:padding="0dp"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/black"
+            android:fontFamily="@font/poppins_regular">
+
+            <TextView
+                android:id="@+id/idTVSecProvHosp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_register"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="10dp"
+                android:text="Does the secondary power source provide power to the entire hospital?"
+                android:textAllCaps="false"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="18sp"
+               />
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/chkYesProvPO"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_seven_fe"
+                    android:text="Yes"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkNoProvPO"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_seven_fe"
+                    android:text="No"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="14sp"></RadioButton>
+            </RadioGroup>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILSecPoSrc"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:hint="Date of Interview"
+            android:padding="0dp"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/black"
+            android:fontFamily="@font/poppins_regular">
+
+            <TextView
+                android:id="@+id/idTVSecPoSrc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_register"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:text="If it is only part, which of the following areas receives power from the secondary power source?"
+                android:textAllCaps="false"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="20sp"
+                 />
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/chkICU"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_eight_fe"
+                    android:text="ICU"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkOpTheatre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_eight_fe"
+                    android:text="Operating Theatre     "
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkByEmrgeRoom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_eight_fe"
+                    android:text="Emergency Room"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="14sp"></RadioButton>
+            </RadioGroup>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILOther"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:hint="Other"
+            android:padding="15dp"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/black"
+            android:fontFamily="@font/poppins_regular">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/id_other"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILComPoSrc"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:hint="Comments on the secondary power source"
+            android:padding="15dp"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/black"
+            android:fontFamily="@font/poppins_regular">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/idComPoSrc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILElectUsaLast"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:hint="What was the electricity usage of the last month (# kWh)?"
+            android:padding="15dp"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/black"
+            android:fontFamily="@font/poppins_regular">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/idElectUsaLast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILCostOrElect"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:hint="What was the cost/electricity bill for the last month (# Metical)?"
+            android:padding="15dp"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/black"
+            android:fontFamily="@font/poppins_regular">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/idCostOrElect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILElectSystem"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:hint="Date of Interview"
+            android:padding="0dp"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/black"
+            android:fontFamily="@font/poppins_regular">
+
+
+            <TextView
+                android:id="@+id/idElectSystem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_register"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="10dp"
+                android:text="Condition of the electrical system"
+                android:textAllCaps="false"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="18sp"
+                />
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/chkDanger"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_nine_fe"
+                    android:text="Dangerous "
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkPoor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_nine_fe"
+                    android:text="Poor"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkAdequate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_nine_fe"
+                    android:text="Adequate"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="14sp"></RadioButton>
+
+                <RadioButton
+                    android:id="@+id/chkGood"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_nine_fe"
+                    android:text="Good"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="14sp"></RadioButton>
+            </RadioGroup>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILCommentsElect"
+            style="@style/Edit_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:hint="Commetsn on the electrical system"
+            android:padding="15dp"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/black"
+            android:fontFamily="@font/poppins_regular">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/idCommetsElect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btn_back"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/blue_fill__rounded_color"
+                android:text="Voltar"
+                android:textColor="@color/white"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_nextI"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/blue_fill__rounded_color"
+                android:text="Proximo"
+                android:textColor="@color/white"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

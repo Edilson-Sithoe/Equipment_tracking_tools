@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="projecto.jhpiego.equipment_track_tools">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Equipment_track_tools"
+        android:fullBackupContent="true">
+        <activity
+            android:name=".generalForm.Form_all_data_view"
+            android:exported="false" />
+        <activity
+            android:name=".view.inventory.Update_equipm_inventory"
+            android:parentActivityName=".view.inventory.FormEquipInventory" />
+        <activity
+            android:name=".view.inventory.Form_inventory_view"
+            android:exported="false"
+            android:parentActivityName=".TelaPrincipal" />
+        <activity
+            android:name=".generalForm.FormOxFactoryPSA"
+            android:exported="false" />
+
+        <activity
+            android:name=".view.inventory.FormEquipInventory"
+            android:exported="false"
+            android:label="Add Inventory"
+            android:parentActivityName=".view.inventory.Form_inventory_view" />
+        <activity
+            android:name=".generalForm.FormMedGasOutlets"
+            android:exported="false" />
+        <activity
+            android:name=".generalForm.FormOxFactory"
+            android:exported="false" />
+        <activity
+            android:name=".generalForm.FormDocTrainLiqOxTank"
+            android:exported="false" />
+        <activity
+            android:name=".generalForm.FormTrainDocManif"
+            android:exported="false" />
+        <activity
+            android:name=".generalForm.FormDocTrainConc"
+            android:exported="false" />
+        <activity
+            android:name=".generalForm.FormTrainDocCylinders"
+            android:exported="false" />
+        <activity
+            android:name=".generalForm.FormTeam"
+            android:exported="false" />
+        <activity
+            android:name=".generalForm.FormSupervisory"
+            android:exported="false" />
+        <activity
+            android:name=".generalForm.FormMaintaMedEquip"
+            android:exported="false" />
+        <activity
+            android:name=".generalForm.FormLogistic"
+            android:exported="false" />
+        <activity
+            android:name=".generalForm.FormMainPiping"
+            android:exported="false" />
+        <activity
+            android:name=".generalForm.FormMedAirSystem"
+            android:exported="false" />
+        <activity
+            android:name=".generalForm.FormVaccumSystem"
+            android:exported="false" />
+        <activity
+            android:name=".generalForm.FormLiquidOxTwoo"
+            android:exported="false" />
+        <activity
+            android:name=".generalForm.FormLiquidOx"
+            android:exported="false" />
+        <activity
+            android:name=".generalForm.FormMFEmerg"
+            android:exported="false" />
+        <activity
+            android:name=".generalForm.FormManiFoldTwoo"
+            android:exported="false" />
+        <activity
+            android:name=".generalForm.FormManiFold"
+            android:exported="false" />
+        <activity
+            android:name=".generalForm.FormConcentrator"
+            android:exported="false" />
+        <activity
+            android:name=".generalForm.FormCylinders"
+            android:exported="false" />
+        <activity
+            android:name=".generalForm.FormFreePrevFFS"
+            android:exported="false" />
+        <activity
+            android:name=".generalForm.FormOxigenSystem"
+            android:exported="false" />
+        <activity
+            android:name=".generalForm.FormSolarEnergy"
+            android:exported="false" />
+        <activity
+            android:name=".generalForm.FormUPSTwoo"
+            android:exported="false" />
+        <activity
+            android:name=".generalForm.FormUPSOne"
+            android:exported="false" />
+        <activity
+            android:name=".generalForm.FormStabilizer"
+            android:exported="false" />
+        <activity
+            android:name=".generalForm.FormGeneratorFour"
+            android:exported="false" />
+        <activity
+            android:name=".generalForm.FormGeneratorThree"
+            android:exported="false" />
+        <activity
+            android:name=".generalForm.FormGeneratorTwo"
+            android:exported="false" />
+        <activity
+            android:name=".generalForm.FormGeneratorOne"
+            android:exported="false" />
+        <activity
+            android:name=".generalForm.FormElectricity"
+            android:exported="false" />
+        <activity
+            android:name=".generalForm.FormIdentiHeaFacil"
+            android:exported="false" />
+        <activity
+            android:name=".generalForm.FormIdentiInterView"
+            android:exported="false" />
+        <activity
+            android:name=".generalForm.FormInterviewID"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".user.FormCadastro"
+            android:exported="false" />
+        <activity
+            android:name=".login.FormLogin"
+            android:exported="false" />
+        <activity
+            android:name=".TelaPrincipal"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

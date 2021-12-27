@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".generalForm.FormOxFactory">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/blue_bg">
+
+            <TextView
+                android:id="@+id/idTVEvery6months"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="O2 FACTORY"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </FrameLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TILTreined"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="Are technicians trained in matters related to use, maintenance, and safety of O2  Plants (PSA)?"
+            style="@style/Edit_Text"
+            android:padding="0dp"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento"
+            android:fontFamily="@font/poppins_regular">
+
+            <TextView
+                android:id="@+id/idTVTrained"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_register"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="10dp"
+                android:text="Are technicians trained in matters related to use, maintenance, and safety of O2  Plants (PSA)?"
+                android:textAllCaps="false"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="16sp"
+                />
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chkYesMS"
+                    android:inputType="text"
+                    android:onClick="onRadioButtonClicked_ox_fact"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="14sp"
+                    android:layout_marginStart="0dp"
+                    android:text="Yes">
+                </RadioButton>
+                <RadioButton
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chkNoMS"
+                    android:onClick="onRadioButtonClicked_ox_fact"
+                    android:inputType="text"
+                    android:textColor="@color/color_txt"
+                    android:textColorHint="@color/cinzento"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="14sp"
+                    android:layout_marginStart="10dp"
+                    android:text="No">
+                </RadioButton>
+        </RadioGroup>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TILST"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="What is the frequency of training?"
+            style="@style/Edit_Text"
+            android:padding="0dp"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento"
+            android:fontFamily="@font/poppins_regular">
+
+            <TextView
+                android:id="@+id/idTVST"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_register"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="10dp"
+                android:text="What is the frequency of training?"
+                android:textAllCaps="false"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="18sp"
+                />
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/chkEvery6"
+                android:inputType="text"
+                android:onClick="onRadioButtonClicked1_ox_fact"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:text="Every 6 months">
+            </RadioButton>
+
+            <RadioButton
+                android:id="@+id/chkEveryYear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:inputType="text"
+                android:text="Every year"
+                android:onClick="onRadioButtonClicked1_ox_fact"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp">
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/chkEvery2Year"
+                android:inputType="text"
+                android:onClick="onRadioButtonClicked1_ox_fact"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:text="Every 2 years">
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/chkEvery5Year"
+                android:inputType="text"
+                android:onClick="onRadioButtonClicked1_ox_fact"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:text="Every 5 years">
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/chkOnRequest"
+                android:inputType="text"
+                android:onClick="onRadioButtonClicked1_ox_fact"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:text="On request">
+            </RadioButton>
+            </RadioGroup>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/idTVtxtTSHFTM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_register"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="How many technicians are trained in matters related to handling, maintenance, and safety of O2 Factories? (#)"
+            android:textAllCaps="false"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="16sp"
+            />
+
+
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TILtxtMTTH"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="How many technicians are trained in matters related to handling, maintenance, and safety of O2 Factories? (#)"
+            style="@style/Edit_Text"
+            android:padding="15dp"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento"
+            android:fontFamily="@font/poppins_regular">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtMTTH"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="12sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TILtxtOther"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="Comments on  O2 Plants"
+            style="@style/Edit_Text"
+            android:padding="15dp"
+            android:textColor="@color/color_txt"
+            android:textColorHint="@color/cinzento"
+            android:fontFamily="@font/poppins_regular">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtCommentsTraiC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColor="@color/color_txt"
+                android:textColorHint="@color/cinzento"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="12sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btn_backOxFac"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/blue_fill__rounded_color"
+                android:text="Voltar"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/blue_fill__rounded_color"
+                android:text="Proximo"
+                android:textAllCaps="false"
+                android:textColor="@color/white"  />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</ScrollView>

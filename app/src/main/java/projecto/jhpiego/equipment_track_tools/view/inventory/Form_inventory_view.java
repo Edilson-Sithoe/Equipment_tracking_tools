@@ -42,7 +42,7 @@ public class Form_inventory_view extends AppCompatActivity {
     ImageView imageView;
     TextView textView;
 
-    String[] mensagens = {"No data to show"};
+    String[] mensagens = {"Sem dados para mostrar"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
